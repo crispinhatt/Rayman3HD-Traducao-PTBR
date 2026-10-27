@@ -3,7 +3,15 @@
 Tradução para português do Brasil de **Rayman 3 HD** (versão Xbox 360), feita como *mod* para o port nativo para Windows
 [Rayman 3 HD Recompiled](https://github.com/MysteriousAeon/rayman3-hd-recompiled), de MysteriousAeon.
 
-> **Status: 1.0.0-beta.** Menus, dicas, bestiário, diálogos e legendas das cutscenes traduzidos. Veja [o que falta](#o-que-falta).
+> **Versão 1.0.0.** Menus, dicas, bestiário, diálogos e legendas das cutscenes traduzidos. Veja [o que falta](#o-que-falta).
+
+## Capturas de tela
+
+![Captura de tela 1](imagens/0.png)
+
+![Captura de tela 2](imagens/1.png)
+
+![Captura de tela 3](imagens/2.png)
 
 ## O que está traduzido
 
@@ -27,7 +35,7 @@ nomes de ranking, gritos e onomatopeias).
 
 Você precisa ter o **Rayman 3 HD Recompiled** funcionando, com a sua própria cópia do jogo do Xbox 360.
 
-1. Baixe `rayman3-ptbr-1.0.0-beta.zip` na página de [Releases](../../releases).
+1. Baixe o [`rayman3-ptbr-1.0.0.zip`](https://github.com/crispinhatt/Rayman3HD-Traducao-PTBR/raw/main/rayman3-ptbr-1.0.0.zip) (arquivo na raiz deste repositório). Não precisa descompactar.
 2. No jogo, abra **Settings > Mods > Install .zip** e escolha o arquivo.
 3. Deixe o mod ativado (caixa marcada) e **reinicie o jogo**.
 4. Se tiver outro mod de idioma instalado (por exemplo o turco), desative-o.
@@ -37,25 +45,26 @@ Para voltar ao inglês, desative ou remova o mod em **Settings > Mods** e reinic
 ## Este repositório
 
 ```
-mod/mod.json                  mod pronto (só texto em português + hashes de conferência)
+rayman3-ptbr-1.0.0.zip        o mod pronto para instalar
+imagens/                      capturas de tela usadas neste README
+mod/mod.json                  mod em texto (só português + hashes de conferência)
 traducao/traducao_ptbr.csv    a tradução em planilha (tipo ; chave ; bytes_orig ; ptbr ; hash_orig)
 ferramentas/gerar_mod.py      planilha -> mod.json (valida acentos, códigos de controle e caracteres proibidos)
 ferramentas/preencher_ingles.py  cria uma planilha LOCAL com o inglês do SEU jogo, para revisar/continuar
-COMO_FUNCIONA.md             detalhes técnicos
-GUIA_STEAM.txt               guia em BBCode para a Steam
+COMO_FUNCIONA.md              detalhes técnicos
 ```
 
 ### Gerar o mod a partir da planilha
 
 ```
 cd ferramentas
-python gerar_mod.py ..\traducao\traducao_ptbr.csv ..\mod --version 1.0.0-beta
+python gerar_mod.py ..\traducao\traducao_ptbr.csv ..\mod --version 1.0.0
 ```
 
 Depois empacote e valide com a ferramenta do próprio projeto (na pasta de instalação do jogo):
 
 ```
-app\python\python.exe app\tools\r3hd_modkit.py --home . pack <pasta-do-mod> rayman3-ptbr.zip
+app\python\python.exe app\tools\r3hd_modkit.py --home . pack <pasta-do-mod> rayman3-ptbr-1.0.0.zip
 ```
 
 ### Corrigir ou continuar a tradução
